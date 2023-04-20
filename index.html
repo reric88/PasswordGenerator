@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Password Generator" />
+    <meta name="author" content="Eric Collard" />
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/9fbf6c4d27.js" crossorigin="anonymous"></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div id="container">
+        <h2>Password Generator</h2>
+        <section id="results-container">
+            <!-- The password will be displayed in the span below -->
+            <button class="btn" id="clipboard">
+                <!-- Font Awesome icon as button text -->
+                <i class="fa-regular fa-clipboard"></i>
+            </button>
+            <span id="result"></span>
+        </section>
+        <section id="options">
+            <div class="option">
+                <label for="lowercase">Lowercase Letters</label>
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+            </div>
+            <div class="option">
+                <label for="uppercase">Uppercase Letters</label>
+                <input type="checkbox" name="uppercase" id="uppercase" checked>
+            </div>
+            <div class="option">
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" name="numbers" id="numbers" checked>
+            </div>
+            <div class="option">
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" name="symbols" id="symbols" checked>
+            </div>
+            <div class="option">
+                <label for="length">Length</label>
+                <input type="number" name="length" id="length" value="10" min="4" max="20">
+            </div>
+        </section>
+        <button class="btn" id="generate">Generate Password</button>
+    </div>
+    <!-- Link to JS file -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+/* Importing font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #6495ed;
+    --color: #eef1ef;
+    --font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+div {
+    /* margin: 1rem; */
+    /* text-align: center; */
+}
+
+h2 {
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn {
+    /* background-color: var(--bg-color); */
+    background-color: #6495edcc;
+    border: none;
+    border-radius: 3px;
+    color: var(--color);
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#container {
+    background-image: radial-gradient(#639a, #639c);
+    padding: 15px;
+    width: 350px;
+    height: fit-content;
+    border-radius: 5px ;
+}
+
+#results-container {
+    background-color: #243119cc;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 5px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#clipboard {
+    font-size: 20px;
+}
+
+#generate {
+    font-size: 16px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+input {
+    border: none;
+    border-radius: 3px;
+}
+

@@ -62,15 +62,15 @@ console.log(getRandomSymbol());
 
 // Object to store all the character generator functions
 const randomFunctions = {
-    lower: getRandomLower(),
-    upper: getRandomUpper(),
-    number: getRandomNumber(),
-    symbol: getRandomSymbol(),
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol,
 }
 
 // Selecting DOM Elements
-const resultEl = document.querySelector('#results');
-const cliboardEl = document.querySelector('#clipboard');
+const resultEl = document.querySelector('#result');
+const clipboardEl = document.querySelector('#clipboard');
 const lowercaseEl = document.querySelector('#lowercase');
 const uppercaseEl = document.querySelector('#uppercase');
 const numbersEl = document.querySelector('#numbers');
@@ -160,4 +160,24 @@ generateEl.addEventListener('click', ()=>{
     // The generatePassword function takes the true/false values determined by the checkboxes as well as the number from the number input (length), as arguments and returns the finalPassword string. Then it is set to the innerText of the resultEl
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length)
 });
+
+// Copy the Password
+clipboardEl.addEventListener('click', ()=>{
+    //Access the password result
+    const password = resultEl.innerText;
+
+    // If the user clicks the clipboard before a password is displayed then an alert will show
+    if (password === ''){
+        alert('Please generate a password first')
+        return
+    }
+console.log(password);
+    // Referencing the 'navigator' object to copy the selected value to the clipboard on the device the webpage is being viewed on
+    navigator.clipboard.writeText(password);
+});
+
+
+
+
+
 

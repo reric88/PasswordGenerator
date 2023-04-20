@@ -171,6 +171,7 @@ clipboardEl.addEventListener('click', ()=>{
         alert('Please generate a password first')
         return
     }
+    
 console.log(password);
     // Referencing the 'navigator' object to copy the selected value to the clipboard on the device the webpage is being viewed on
     navigator.clipboard.writeText(password);
